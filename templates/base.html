@@ -1,0 +1,41 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block css %}{% endblock %}
+
+    <title>Zeuses Bounty | {% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <!-- Header starts -->
+    <header>
+        <section>
+            <div class="container">
+                <h1 class="text-center">Header</h1>
+            </div>
+        </section>
+    </header>
+    <!-- Global Body Starts -->
+    {% block content %}{% endblock %}
+    <!-- Footer Starts -->
+    <footer>
+        <section>
+            <div class="container">
+                <h1 class="text-center">Footer</h1>
+            </div>
+        </section>
+    </footer>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="{% static 'js/bootstrap/bootstrap.bundle.min.js' %}"></script>
+    {% block js %}{% endblock %}
+</body>
+</html>
